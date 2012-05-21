@@ -1,0 +1,47 @@
+<head>
+<title>Math Play!</title>
+<meta name="viewport" content="width=420"/>
+</head>
+
+<body>
+<div id="content">
+	<h1>Math Play!</h1>
+	{{> name_input}}
+	<hr/>
+	{{> current_question}}
+	{{> number_input}}
+	<hr/>
+	{{> question_history}}
+</div>
+</body>
+
+<template name="name_input">
+	<div id="name_inputbox">
+		<input id="nametextbox" type="text" class="small"/>
+		<button id="setnamebutton" class="small">Set Player Name</button>
+	</div>
+</template>
+
+<template name="number_input">
+	<div id="number_inputbox">
+		<input id="answertextbox" type="text"/>
+		(Enter to Submit)
+	</div>
+</template>
+
+<template name="current_question">
+	<div class="question">{{order_number}}: {{questiontext}}</div>
+</template>
+
+<template name="question_history">
+	<div id="history">
+			{{#each questions}}
+				{{> question_item}}
+			{{/each}}
+	<button id="deleteallbutton" class="small">Clear History</button>
+	</div>
+</template>
+
+<template name="question_item">
+	<div class="question">{{order_number}}: {{text}} ({{player}})</div>
+</template>

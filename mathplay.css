@@ -1,0 +1,31 @@
+/* CSS declarations go here */
+
+* {
+	/*
+	margin: 0px;
+	padding: 0px;
+	*/
+}
+
+body {
+	background-color: white;
+	font-size: 20px;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+#content {
+	position: absolute;
+	width: 400px;
+	left: 50%;
+	margin-left: -200px;
+}
+
+input, button {
+	font-size: 20px;
+	padding: 5px;
+	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+}
+
+.small {
+	font-size: 12px;
+}
